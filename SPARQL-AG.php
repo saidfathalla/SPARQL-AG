@@ -142,7 +142,8 @@ input[type=submit]:hover, button:hover {
   <a href="https://github.com/saidfathalla/SPARQL-AG/issues/new/choose">Issue Tracker</a>
   <a href="http://kddste.sda.tech/sparql">SPARQL endpoint</a>
   <a href="#">Live Demo</a>
-  <a href="/SPARQL-AG/contact-form/contactUsForm.php">Contact Us</a> </div>
+<!--  <a href="http://kddste.sda.tech/SER-Service/SPARQL-AG/contact-form/contactUsForm.php">Contact Us</a> 
+-->  </div>
 <div class="row">
   <div class="column side">
     <h2>&nbsp;</h2>
@@ -1175,7 +1176,7 @@ DESC</td>
 			
 		
 	</form>
-            <form method="post" action="/SPARQL-AG/querySPARQLClient.php">
+            <form method="post" action="/SER-Service/SPARQL-AG/querySPARQLClient.php">
   <p><strong>2.5 query execution: </strong>you can edit the generated query before press the Execute button.</p>
   <p>
     	&nbsp;
@@ -1187,8 +1188,8 @@ DESC</td>
 </form>
             <hr />
             <h4>3. Parametarized predefined SPARQL queries</h4>
-            <p>We appreciate supporting us by suggesting interesting  parameterized queries, which we can add to our query list in this section. You  can send your suggestions <a href="/SPARQL-AG/contact-form/contactUsForm.php">here</a>.</p>
-            <form method="post" action="/SPARQL-AG/querySPARQLClientParameterized.php">
+            <p>We appreciate supporting us by suggesting interesting  parameterized queries, which we can add to our query list in this section. You  can send your suggestions <a href="https://github.com/saidfathalla/SPARQL-AG/issues/new?template=suggest_query.md">here</a>.</p>
+            <form method="post" action="/SER-Service/SPARQL-AG/querySPARQLClientParameterized.php">
 
             <table width="80%" border="0" cellspacing="0" cellpadding="0">
               <tr>
