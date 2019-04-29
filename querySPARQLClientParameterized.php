@@ -23,7 +23,7 @@
         // define variables and set to empty values
        
         $querystring = "";
- 
+ // generate queries depending on query templates.
  	   if(isset($_POST['submit31'])){ // for query 3.1
 
             $querystring = ' PREFIX seo: <http://purl.org/seo/> 
