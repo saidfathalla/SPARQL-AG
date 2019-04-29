@@ -19,6 +19,7 @@
 
 
         <?php
+		// for displaying results
         header('X-XSS-Protection:0');  // to prevent X-XSS-Protection
         // define variables and set to empty values
        

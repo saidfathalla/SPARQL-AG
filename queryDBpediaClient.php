@@ -1,6 +1,7 @@
 <?php
   header('X-XSS-Protection:0');  
-		function askDBpediaCountry($countryString) {
+// query DBpedia Endpoint for countries
+function askDBpediaCountry($countryString) {
 	
 	// echo $_SERVER['DOCUMENT_ROOT'];
             $querystring = "";

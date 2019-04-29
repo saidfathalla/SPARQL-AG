@@ -22,6 +22,7 @@
 
 </form>
        <div> <?php
+	   // validating SPARQL query before sumission
 	   if(isset($_POST['submit'])){ 
          //code to be executed
         header('X-XSS-Protection:0');  // to prevent X-XSS-Protection
