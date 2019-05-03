@@ -1,24 +1,16 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
- 
 
-    <body>
-    
-        <h3>Results:</h3>
-     
 
 <?php
   header('X-XSS-Protection:0');  
 	//	function askDBpediaCountry($countryString) {
-      if ($_SERVER['DOCUMENT_ROOT']=='C:/wamp64/www')
+     /*  if ($_SERVER['DOCUMENT_ROOT']=='C:/wamp64/www')
 	    define("RDFAPI_INCLUDE_DIR", $_SERVER['DOCUMENT_ROOT']."/SPARQL-AG/api/");
-		else
+		else */
 		define("RDFAPI_INCLUDE_DIR", $_SERVER['DOCUMENT_ROOT']."SPARQL-AG/api/");
 			   
 	   include(RDFAPI_INCLUDE_DIR . "RdfAPI.php");
         include (RDFAPI_INCLUDE_DIR . "sparql/SparqlEngine.php");
-		
-		
+			
 	$countries = array("Afghanistan", "Albania", "Algeria", "American Samoa", "Andorra", "Angola", "Anguilla", "Antarctica", "Antigua and Barbuda", 
 	"Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", 
 	"Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia and Herzegowina", "Botswana", "Bouvet Island", "Brazil", "British Indian Ocean Territory", "Brunei Darussalam", 
@@ -45,8 +37,6 @@
 
 	// echo $_SERVER['DOCUMENT_ROOT'];
             $querystring = "";
-			
- 
 // Create a SPARQL client  
             $client = ModelFactory::getSparqlClient("https://dbpedia.org/sparql");
             $query = new ClientQuery();
@@ -67,12 +57,8 @@
 					$result = $client->query($query);
 				 if (isset($result[0])) 
 						echo '<option value="'.$result[0]['?country']->getLabel().'">' . $value  . "</option>";
-					  
-	
-					 
+			 
             }
 			echo ' </select>';
 //		}
 	?>
-	    </body>
-</html>

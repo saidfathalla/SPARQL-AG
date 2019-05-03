@@ -448,10 +448,10 @@ input[type=submit]:hover, button:hover {
 				<td>
 				<select name="typeVal" class="form-control"  >
 						<!--selected="selected"-->
-					<option value="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Conference" <?php if (!(strcmp("https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Conference", ($_POST["typeVal"])))) {echo "selected";} ?>>Conference</option>
-					<option value="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Workshop" <?php if (!(strcmp("https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Workshop", $_POST["typeVal"]))) {echo "selected";} ?>>Workshop</option>
-					<option value="http://purl.org/seo/Symposium" <?php if (!(strcmp("http://purl.org/seo/Symposium", ($_POST["typeVal"])))) {echo "selected=\"selected\"";} ?>>Symposium</option>
-					<?php echo $_POST["typeVal"];?>
+					<option value="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Conference" <?php if(isset($_POST["typeVal"])) {if  (!(strcmp("https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Conference", $_POST["typeVal"]))) {echo "selected";}} ?>>Conference</option>
+					<option value="https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Workshop" <?php if(isset($_POST["typeVal"])) if (!(strcmp("https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Workshop", $_POST["typeVal"]))) {echo "selected";} ?>>Workshop</option>
+					<option value="http://purl.org/seo/Symposium" <?php if(isset($_POST["typeVal"])) if (!(strcmp("http://purl.org/seo/Symposium", ($_POST["typeVal"])))) {echo "selected=\"selected\"";} ?>>Symposium</option>
+					 
 				</select></td>
 				
 			  </tr>
@@ -470,7 +470,7 @@ input[type=submit]:hover, button:hover {
 			<td width="17%">
 			<select name="countryVal" class="form-control"  >
 							  <option value="http://dbpedia.org/resource/Afganistan">Afghanistan</option>
-							  <option value="http://dbpedia.org/resource/Albania" <?php if ($_POST['countryVal'] == 'http://dbpedia.org/resource/Albania') echo ' selected="selected"'; ?>>Albania</option>
+							  <option value="http://dbpedia.org/resource/Albania" <?php if(isset($_POST["countryVal"])) if ($_POST['countryVal'] == 'http://dbpedia.org/resource/Albania') echo ' selected="selected"'; ?>>Albania</option>
 							  <option value="http://dbpedia.org/resource/Algeria">Algeria</option>
 							  <option value="http://dbpedia.org/resource/American_Samoa">American Samoa</option>
 							  <option value="http://dbpedia.org/resource/Andorra">Andorra</option>
@@ -712,14 +712,14 @@ input[type=submit]:hover, button:hover {
 					<!--checked="checked"-->
 					<td>
 					<select name="fieldVal" class="form-control">
-						  <option value="<http://purl.org/seo#ArtificialIntelligence>" <?php if ($_POST['fieldVal'] == '<http://purl.org/seo#ArtificialIntelligence>') echo ' selected="selected"'; ?>>Artificial Intelligence</option>
-						  <option value="<http://purl.org/seo#SoftwareEngineering>"<?php if ($_POST['fieldVal'] == '<http://purl.org/seo#SoftwareEngineering>') echo ' selected="selected"'; ?>>Software Engineering </option>
-						  <option value="<http://purl.org/seo#WorldWideWeb>"<?php if ($_POST['fieldVal'] == '<http://purl.org/seo#WorldWideWeb>') echo ' selected="selected"'; ?>>Web Technologies</option>
-						  <option value="<http://purl.org/seo#SecurityAndPrivacy>"<?php if ($_POST['fieldVal'] == '<http://purl.org/seo#SecurityAndPrivacy>') echo ' selected="selected"'; ?>>Computer Security</option>
-						  <option value="<http://purl.org/seo#InformationSystems>"<?php if ($_POST['fieldVal'] == '<http://purl.org/seo#InformationSystems>') echo ' selected="selected"'; ?>>Information systems</option>
-						  <option value="<http://purl.org/seo#ComputerSystemsOrganization>"<?php if ($_POST['fieldVal'] == '<http://purl.org/seo#ComputerSystemsOrganization>') echo ' selected="selected"'; ?>>Computer systems organization</option>
-						  <option value="<http://purl.org/seo#HumanCenteredComputing>"<?php if ($_POST['fieldVal'] == '<http://purl.org/seo#HumanCenteredComputing>') echo ' selected="selected"'; ?>>Human Centered Computing</option>
-						  <option value="<http://purl.org/seo#TheoryOfComputations>"<?php if ($_POST['fieldVal'] == '<http://purl.org/seo#TheoryOfComputations>') echo ' selected="selected"'; ?>>Theory of Computation</option>
+						  <option value="<http://purl.org/seo#ArtificialIntelligence>" <?php if(isset($_POST['fieldVal'])) if ($_POST['fieldVal'] == '<http://purl.org/seo#ArtificialIntelligence>') echo ' selected="selected"'; ?>>Artificial Intelligence</option>
+						  <option value="<http://purl.org/seo#SoftwareEngineering>"<?php if(isset($_POST['fieldVal']))if ($_POST['fieldVal'] == '<http://purl.org/seo#SoftwareEngineering>') echo ' selected="selected"'; ?>>Software Engineering </option>
+						  <option value="<http://purl.org/seo#WorldWideWeb>"<?php if(isset($_POST['fieldVal']))if ($_POST['fieldVal'] == '<http://purl.org/seo#WorldWideWeb>') echo ' selected="selected"'; ?>>Web Technologies</option>
+						  <option value="<http://purl.org/seo#SecurityAndPrivacy>"<?php if(isset($_POST['fieldVal']))if ($_POST['fieldVal'] == '<http://purl.org/seo#SecurityAndPrivacy>') echo ' selected="selected"'; ?>>Computer Security</option>
+						  <option value="<http://purl.org/seo#InformationSystems>"<?php if(isset($_POST['fieldVal']))if ($_POST['fieldVal'] == '<http://purl.org/seo#InformationSystems>') echo ' selected="selected"'; ?>>Information systems</option>
+						  <option value="<http://purl.org/seo#ComputerSystemsOrganization>"<?php if(isset($_POST['fieldVal']))if ($_POST['fieldVal'] == '<http://purl.org/seo#ComputerSystemsOrganization>') echo ' selected="selected"'; ?>>Computer systems organization</option>
+						  <option value="<http://purl.org/seo#HumanCenteredComputing>"<?php if(isset($_POST['fieldVal']))if ($_POST['fieldVal'] == '<http://purl.org/seo#HumanCenteredComputing>') echo ' selected="selected"'; ?>>Human Centered Computing</option>
+						  <option value="<http://purl.org/seo#TheoryOfComputations>"<?php if(isset($_POST['fieldVal']))if ($_POST['fieldVal'] == '<http://purl.org/seo#TheoryOfComputations>') echo ' selected="selected"'; ?>>Theory of Computation</option>
 						</select></td>
 					<td>&nbsp;</td>
 					<td>&nbsp;</td>
@@ -728,16 +728,17 @@ input[type=submit]:hover, button:hover {
 				 <tr>
 					  <td>
 					  <input name="filacc" type="checkbox" <?php if(isset($_POST['filacc'])) echo 'checked="checked"'; ?> >  acceptance rate </input> </td>
-					  <td><select name="op">
-						<option value=">"> &gt;</option>
-						<option value=">="> &ge;</option>
-						<option value="<"> &lt;</option>
-						<option value=">="> &le;</option>
-						<option value="="> =</option>
-						<option value="!="> &ne;</option>
+					  <td>
+					  <select name="op" >
+						<option value=">"<?php if(isset($_POST['op']))if ($_POST['op'] == '>') echo ' selected'; ?>> &gt;</option>
+						<option value=">="<?php if(isset($_POST['op']))if ($_POST['op'] == '>=') echo ' selected'; ?>> &ge;</option>
+						<option value="<"<?php if(isset($_POST['op']))if ($_POST['op'] == '<') echo ' selected'; ?>> &lt;</option>
+						<option value="<="<?php if(isset($_POST['op']))if ($_POST['op'] == '<=') echo ' selected'; ?>> &le;</option>
+						<option value="="<?php if(isset($_POST['op']))if ($_POST['op'] == '=') echo ' selected'; ?>> =</option>
+						<option value="!="<?php if(isset($_POST['op']))if ($_POST['op'] == '!=') echo ' selected'; ?>> &ne;</option>
 					  </select></td>
 					  <td>
-					  <input name="accVal" type="text" value="0.20" size="27"class="form-control"<?php if(isset($_POST['accVal'])) echo 'value="'.$_POST['accVal'].'"'; ?>/></td>
+					  <input name="accVal" type="text"  size="27"class="form-control" <?php if(isset($_POST['accVal'])) echo 'value="'.$_POST['accVal'].'"'; ?>/></td>
 					  <td>&nbsp;</td>
 					  <td>&nbsp;</td>
 					  <td> &nbsp;
@@ -746,14 +747,14 @@ input[type=submit]:hover, button:hover {
 							  <tr>
 								<td><input name="filAP" type="checkbox" <?php if(isset($_POST['filAP'])) echo 'checked="checked"'; ?>> accepted papers </input></td>
 								<td><select name="opAP">
-								  <option value="&gt;"> &gt;</option>
-								  <option value="&gt;="> &ge;</option>
-								  <option value="&lt;"> &lt;</option>
-								  <option value="&gt;="> &le;</option>
-								  <option value="="> =</option>
-								  <option value="!="> &ne;</option>
+									<option value=">"<?php if(isset($_POST['opAP']))if ($_POST['opAP'] == '>') echo ' selected'; ?>> &gt;</option>
+									<option value=">="<?php if(isset($_POST['opAP']))if ($_POST['opAP'] == '>=') echo ' selected'; ?>> &ge;</option>
+									<option value="<"<?php if(isset($_POST['opAP']))if ($_POST['opAP'] == '<') echo ' selected'; ?>> &lt;</option>
+									<option value="<="<?php if(isset($_POST['opAP']))if ($_POST['opAP'] == '<=') echo ' selected'; ?>> &le;</option>
+									<option value="="<?php if(isset($_POST['opAP']))if ($_POST['opAP'] == '=') echo ' selected'; ?>> =</option>
+									<option value="!="<?php if(isset($_POST['opAP']))if ($_POST['opAP'] == '!=') echo ' selected'; ?>> &ne;</option>
 								</select></td>
-								<td><input name="APVal" type="text" value="50" size="27"class="form-control"<?php if(isset($_POST['APVal'])) echo 'value="'.$_POST['APVal'].'"'; ?>/></td>
+								<td><input name="APVal" type="text"  size="27"class="form-control"<?php if(isset($_POST['APVal'])) echo 'value="'.$_POST['APVal'].'"'; ?>/></td>
 								<td>&nbsp;</td>
 								<td>&nbsp;</td>
 								<td>   &nbsp;
@@ -762,15 +763,16 @@ input[type=submit]:hover, button:hover {
 					  </tr>
 					  <tr>
 						<td><input name="filSP" type="checkbox"  <?php if(isset($_POST['filSP'])) echo 'checked="checked"'; ?>> 	submitted papers </input></td>
-						<td><select name="opSP">
-						  <option value="&gt;"> &gt;</option>
-						  <option value="&gt;="> &ge;</option>
-						  <option value="&lt;"> &lt;</option>
-						  <option value="&gt;="> &le;</option>
-						  <option value="="> =</option>
-						  <option value="!="> &ne;</option>
+						<td>
+						<select name="opSP">
+									<option value=">"<?php if(isset($_POST['opSP']))if ($_POST['opSP'] == '>') echo ' selected'; ?>> &gt;</option>
+									<option value=">="<?php if(isset($_POST['opSP']))if ($_POST['opSP'] == '>=') echo ' selected'; ?>> &ge;</option>
+									<option value="<"<?php if(isset($_POST['opSP']))if ($_POST['opSP'] == '<') echo ' selected'; ?>> &lt;</option>
+									<option value="<="<?php if(isset($_POST['opSP']))if ($_POST['opSP'] == '<=') echo ' selected'; ?>> &le;</option>
+									<option value="="<?php if(isset($_POST['opSP']))if ($_POST['opSP'] == '=') echo ' selected'; ?>> =</option>
+									<option value="!="<?php if(isset($_POST['opSP']))if ($_POST['opSP'] == '!=') echo ' selected'; ?>> &ne;</option>
 						</select></td>
-						<td><input name="SPVal" type="text" value="100" size="27"class="form-control"<?php if(isset($_POST['SPVal'])) echo 'value="'.$_POST['SPVal'].'"'; ?>/></td>
+						<td><input name="SPVal" type="text"   size="27"class="form-control"<?php if(isset($_POST['SPVal'])) echo 'value="'.$_POST['SPVal'].'"'; ?>/></td>
 						<td>&nbsp;</td>
 						<td>&nbsp;</td>
 						<td> &nbsp;
@@ -779,14 +781,15 @@ input[type=submit]:hover, button:hover {
 							  <tr>
 								<td>
 								<input name="filSD" type="checkbox" id="filSD"  <?php if(isset($_POST['filSD'])) echo 'checked="checked"'; ?>>   start date </input></td>
-								<td><select name="opSD" id="opSD" onchange="myFunction('myDIV','myDIV2','opSD')">
-								  <option value="&gt;">&gt;</option>
-								  <option value="&gt;=">&ge;</option>
-								  <option value="&lt;">&lt;</option>
-								  <option value="&gt;=">&le;</option>
-								  <option value="="> =</option>
-								  <option value="!=">&ne;</option>
-								  <option value="btn" selected="selected">between</option>
+								<td>
+								<select name="opSD" id="opSD" onchange="myFunction('myDIV','myDIV2','opSD')">
+									<option value=">"<?php if(isset($_POST['opSD']))if ($_POST['opSD'] == '>') echo ' selected'; ?>> &gt;</option>
+									<option value=">="<?php if(isset($_POST['opSD']))if ($_POST['opSD'] == '>=') echo ' selected'; ?>> &ge;</option>
+									<option value="<"<?php if(isset($_POST['opSD']))if ($_POST['opSD'] == '<') echo ' selected'; ?>> &lt;</option>
+									<option value="<="<?php if(isset($_POST['opSD']))if ($_POST['opSD'] == '<=') echo ' selected'; ?>> &le;</option>
+									<option value="="<?php if(isset($_POST['opSD']))if ($_POST['opSD'] == '=') echo ' selected'; ?>> =</option>
+									<option value="!="<?php if(isset($_POST['opSD']))if ($_POST['opSD'] == '!=') echo ' selected'; ?>> &ne;</option>
+								  <option value="btn" <?php if(isset($_POST['opSD']))if ($_POST['opSD'] == 'btn') echo ' selected'; ?>>between</option>
 								</select></td>
 								<td><input name="SDVal" type="date" id="SDVal"   class="form-control"<?php if(isset($_POST['SDVal'])) echo 'value="'.$_POST['SDVal'].'"'; ?>/>																		</td>
 								<td><div id="myDIV">
@@ -799,14 +802,15 @@ input[type=submit]:hover, button:hover {
 						  <tr>
 							<td>
 							<input name="filED" type="checkbox" id="filED" <?php if(isset($_POST['filED'])) echo 'checked="checked"'; ?> >   end date </input></td>
-							<td><select name="opED" id="opED">
-							  <option value="&gt;">&gt;</option>
-							  <option value="&gt;=">&ge;</option>
-							  <option value="&lt;">&lt;</option>
-							  <option value="&gt;=">&le;</option>
-							  <option value="="> =</option>
-							  <option value="!=">&ne;</option>
-							  <option value="btn" selected="selected">between</option>
+							<td>
+							<select name="opED" id="opED">
+									<option value=">"<?php if(isset($_POST['opED']))if ($_POST['opED'] == '>') echo ' selected'; ?>> &gt;</option>
+									<option value=">="<?php if(isset($_POST['opED']))if ($_POST['opED'] == '>=') echo ' selected'; ?>> &ge;</option>
+									<option value="<"<?php if(isset($_POST['opED']))if ($_POST['opED'] == '<') echo ' selected'; ?>> &lt;</option>
+									<option value="<="<?php if(isset($_POST['opED']))if ($_POST['opED'] == '<=') echo ' selected'; ?>> &le;</option>
+									<option value="="<?php if(isset($_POST['opED']))if ($_POST['opED'] == '=') echo ' selected'; ?>> =</option>
+									<option value="!="<?php if(isset($_POST['opED']))if ($_POST['opED'] == '!=') echo ' selected'; ?>> &ne;</option>
+								  <option value="btn" <?php if(isset($_POST['opED']))if ($_POST['opED'] == 'btn') echo ' selected'; ?>>between</option>
 							</select></td>
 							<td><input name="EDVal" type="date" id="EDVal"  class="form-control" <?php if(isset($_POST['EDVal'])) echo 'value="'.$_POST['EDVal'].'"'; ?>/></td>
 							<td><div id="myDIV"> &nbsp;&nbsp; and</div></td>
@@ -842,18 +846,18 @@ input[type=submit]:hover, button:hover {
        <td width="5%" ><input name="selOrderBy1" type="checkbox" id="selOrderBy1" <?php if(isset($_POST['selOrderBy1'])) echo 'checked="checked"'; ?>/></td>
        <td width="18%" >
 	   <select name="orderbyVal1" class="form-control" id="orderbyVal1"  >
-           <option value="?type" <?php if ($_POST['orderbyVal1'] == '?type') echo ' selected'; ?>>type</option>
-           <option value="?series" <?php if ($_POST['orderbyVal1'] == '?series') echo ' selected'; ?>>series</option>
-           <option value="?country" <?php if ($_POST['orderbyVal1'] == '?country') echo ' selected'; ?>>country</option>
-           <option value="?city"<?php if ($_POST['orderbyVal1'] == '?city') echo ' selected'; ?>>city</option>
-           <option value="?field"<?php if ($_POST['orderbyVal1'] == '?field') echo ' selected'; ?>>field</option>
-           <option value="?acc"<?php if ($_POST['orderbyVal1'] == '?acc') echo ' selected'; ?>>acceptance rate</option>
-           <option value="?AP"<?php if ($_POST['orderbyVal1'] == '?AP') echo ' selected'; ?>>accepted papers</option>
-           <option value="?SP"<?php if ($_POST['orderbyVal1'] == '?SP') echo ' selected'; ?>>submitted papers</option>
-           <option value="?SD"<?php if ($_POST['orderbyVal1'] == '?SD') echo ' selected'; ?>>start date</option>
-           <option value="?ED"<?php if ($_POST['orderbyVal1'] == '?ED') echo ' selected'; ?>>end date</option>
-           <option value="?website"<?php if ($_POST['orderbyVal1'] == '?website') echo ' selected'; ?>>website</option>
-           <option value="?publisher"<?php if ($_POST['orderbyVal1'] == '?publisher') echo ' selected'; ?>>publisher</option>
+           <option value="?type" <?php if(isset($_POST['orderbyVal1']))if ($_POST['orderbyVal1'] == '?type') echo ' selected'; ?>>type</option>
+           <option value="?series" <?php if(isset($_POST['orderbyVal1']))if ($_POST['orderbyVal1'] == '?series') echo ' selected'; ?>>series</option>
+           <option value="?country" <?php if(isset($_POST['orderbyVal1']))if ($_POST['orderbyVal1'] == '?country') echo ' selected'; ?>>country</option>
+           <option value="?city"<?php if(isset($_POST['orderbyVal1']))if ($_POST['orderbyVal1'] == '?city') echo ' selected'; ?>>city</option>
+           <option value="?field"<?php if(isset($_POST['orderbyVal1']))if ($_POST['orderbyVal1'] == '?field') echo ' selected'; ?>>field</option>
+           <option value="?acc"<?php if(isset($_POST['orderbyVal1']))if ($_POST['orderbyVal1'] == '?acc') echo ' selected'; ?>>acceptance rate</option>
+           <option value="?AP"<?php if(isset($_POST['orderbyVal1']))if ($_POST['orderbyVal1'] == '?AP') echo ' selected'; ?>>accepted papers</option>
+           <option value="?SP"<?php if(isset($_POST['orderbyVal1']))if ($_POST['orderbyVal1'] == '?SP') echo ' selected'; ?>>submitted papers</option>
+           <option value="?SD"<?php if(isset($_POST['orderbyVal1']))if ($_POST['orderbyVal1'] == '?SD') echo ' selected'; ?>>start date</option>
+           <option value="?ED"<?php if(isset($_POST['orderbyVal1']))if ($_POST['orderbyVal1'] == '?ED') echo ' selected'; ?>>end date</option>
+           <option value="?website"<?php if(isset($_POST['orderbyVal1']))if ($_POST['orderbyVal1'] == '?website') echo ' selected'; ?>>website</option>
+           <option value="?publisher"<?php if(isset($_POST['orderbyVal1']))if ($_POST['orderbyVal1'] == '?publisher') echo ' selected'; ?>>publisher</option>
            <!--selected="selected"-->
          </select></td>
        <td width="12%" > &nbsp;
@@ -864,18 +868,18 @@ DESC</td>
          <input name="selOrderBy2" type="checkbox" id="selOrderBy2" <?php if(isset($_POST['selOrderBy2'])) echo 'checked="checked"'; ?>/></td>
        <td width="22%" >
 	   <select name="orderbyVal2" class="form-control" id="orderbyVal2"  >
-          <option value="?type" <?php if ($_POST['orderbyVal2'] == '?type') echo ' selected'; ?>>type</option>
-           <option value="?series" <?php if ($_POST['orderbyVal2'] == '?series') echo ' selected'; ?>>series</option>
-           <option value="?country" <?php if ($_POST['orderbyVal2'] == '?country') echo ' selected'; ?>>country</option>
-           <option value="?city"<?php if ($_POST['orderbyVal2'] == '?city') echo ' selected'; ?>>city</option>
-           <option value="?field"<?php if ($_POST['orderbyVal2'] == '?field') echo ' selected'; ?>>field</option>
-           <option value="?acc"<?php if ($_POST['orderbyVal2'] == '?acc') echo ' selected'; ?>>acceptance rate</option>
-           <option value="?AP"<?php if ($_POST['orderbyVal2'] == '?AP') echo ' selected'; ?>>accepted papers</option>
-           <option value="?SP"<?php if ($_POST['orderbyVal2'] == '?SP') echo ' selected'; ?>>submitted papers</option>
-           <option value="?SD"<?php if ($_POST['orderbyVal2'] == '?SD') echo ' selected'; ?>>start date</option>
-           <option value="?ED"<?php if ($_POST['orderbyVal2'] == '?ED') echo ' selected'; ?>>end date</option>
-           <option value="?website"<?php if ($_POST['orderbyVal2'] == '?website') echo ' selected'; ?>>website</option>
-           <option value="?publisher"<?php if ($_POST['orderbyVal2'] == '?publisher') echo ' selected'; ?>>publisher</option>
+          <option value="?type" <?php if(isset($_POST['orderbyVal2']))if ($_POST['orderbyVal2'] == '?type') echo ' selected'; ?>>type</option>
+           <option value="?series" <?php if(isset($_POST['orderbyVal2']))if ($_POST['orderbyVal2'] == '?series') echo ' selected'; ?>>series</option>
+           <option value="?country" <?php if(isset($_POST['orderbyVal2']))if ($_POST['orderbyVal2'] == '?country') echo ' selected'; ?>>country</option>
+           <option value="?city"<?php if(isset($_POST['orderbyVal2']))if ($_POST['orderbyVal2'] == '?city') echo ' selected'; ?>>city</option>
+           <option value="?field"<?php if(isset($_POST['orderbyVal2']))if ($_POST['orderbyVal2'] == '?field') echo ' selected'; ?>>field</option>
+           <option value="?acc"<?php if(isset($_POST['orderbyVal2']))if ($_POST['orderbyVal2'] == '?acc') echo ' selected'; ?>>acceptance rate</option>
+           <option value="?AP"<?php if(isset($_POST['orderbyVal2']))if ($_POST['orderbyVal2'] == '?AP') echo ' selected'; ?>>accepted papers</option>
+           <option value="?SP"<?php if(isset($_POST['orderbyVal2']))if ($_POST['orderbyVal2'] == '?SP') echo ' selected'; ?>>submitted papers</option>
+           <option value="?SD"<?php if(isset($_POST['orderbyVal2']))if ($_POST['orderbyVal2'] == '?SD') echo ' selected'; ?>>start date</option>
+           <option value="?ED"<?php if(isset($_POST['orderbyVal2']))if ($_POST['orderbyVal2'] == '?ED') echo ' selected'; ?>>end date</option>
+           <option value="?website"<?php if(isset($_POST['orderbyVal2']))if ($_POST['orderbyVal2'] == '?website') echo ' selected'; ?>>website</option>
+           <option value="?publisher"<?php if(isset($_POST['orderbyVal2']))if ($_POST['orderbyVal2'] == '?publisher') echo ' selected'; ?>>publisher</option>
            <!--selected="selected"-->
          </select></td>
        <td width="5%" > &nbsp;
